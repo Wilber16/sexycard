@@ -1,22 +1,518 @@
 <!doctype html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#130b13"><title>AFTER DARK · 50 cartas</title>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c0507">
+<title>Noche de Pasión · Juego para parejas +18</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--bg:#100a11;--panel:#1d131e;--panel2:#2b1b2a;--gold:#e7c58e;--cream:#fff1e7;--muted:#c3aab7;--pink:#e45482;--outline:#674054}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 45% -30%,#612341 0,transparent 55%),radial-gradient(ellipse at 80% 110%,#361b3b 0,transparent 48%),var(--bg);font-family:'DM Sans',system-ui,sans-serif;color:var(--cream);min-height:100svh}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.app{max-width:1080px;margin:auto;padding:20px clamp(16px,3vw,32px) 36px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(24px,4vw,33px);letter-spacing:3px;color:var(--gold)}.logo span{color:#ff8da8}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:10px;color:var(--muted);font-weight:800}.smallbtn{border:1px solid #71506b;background:#291b2b;color:var(--cream);padding:10px 13px;border-radius:12px;font-weight:700;font-size:12px}.heading{text-align:center;margin:20px 0 14px}.heading h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(27px,4.5vw,43px);margin:5px 0 6px;font-weight:600}.heading p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.game{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(285px,.92fr);gap:24px;align-items:start}.frame{perspective:1300px}.card{position:relative;min-height:520px;transition:transform .75s cubic-bezier(.21,.7,.24,1);transform-style:preserve-3d;cursor:pointer}.card.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:26px;overflow:hidden;border:1px solid #986179;box-shadow:0 22px 65px #0008,0 0 50px #a02f6825}.front{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(circle at 50% 42%,#703452,#2b1629 65%,#160e19);border:2px solid #bb8a66}.orn{position:absolute;inset:12px;border:1px solid #b78a675f;border-radius:18px;pointer-events:none}.frontmark{width:180px;height:180px;border-radius:50%;border:1px solid #d8b47e70;display:grid;place-items:center;font-size:82px;box-shadow:0 0 0 13px #d8b47e0c,0 0 0 26px #d8b47e08}.frontname{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:2px;color:var(--gold)}.frontsub{color:#e6c4cb;letter-spacing:3px;text-transform:uppercase;font-size:11px}.back{transform:rotateY(180deg);background:linear-gradient(160deg,#382037,#190f1d 78%);padding:25px 25px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}.tag{font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:10px;color:var(--gold);border:1px solid #ad7b81;border-radius:30px;padding:8px 13px}.art{width:100%;height:205px;display:grid;place-items:center;margin:11px 0 4px;border-radius:14px;background:radial-gradient(ellipse at center,#70334b55,transparent 72%)}.art svg{width:100%;height:100%;max-width:310px}.back h2{font-family:'Playfair Display',serif;color:#fff2e8;font-size:clamp(24px,3.4vw,34px);line-height:1.16;margin:6px 0 11px}.back .desc{font-size:15px;line-height:1.55;color:#f2dfe7;max-width:420px;margin:0}.back .time{margin-top:auto;color:#d8bdbd;font-size:12px;padding-top:14px}.cardnote{text-align:center;color:var(--muted);margin-top:11px;font-size:12px}.controls{display:flex;flex-direction:column;gap:12px}.panel{border:1px solid #694052;background:linear-gradient(165deg,#281a29e8,#1b121de8);border-radius:19px;padding:20px;box-shadow:0 12px 35px #0003}.players{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}.player{background:#140d18;border:1px solid #5c3b4b;padding:10px;border-radius:11px;min-width:0}.player.active{border-color:var(--gold);background:#493040}.player label{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.player input{background:transparent;border:0;color:var(--cream);min-width:0;width:100%;font-weight:800;font-size:14px;outline:none}.status{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;color:var(--muted)}.status strong{color:var(--gold)}.track{height:6px;border-radius:9px;background:#4d2e40;margin:10px 0 15px;overflow:hidden}.track>div{background:linear-gradient(90deg,#bd477b,#efc28f);height:100%;width:0;transition:width .3s}.button{width:100%;border-radius:13px;border:0;padding:14px 15px;font-weight:800;font-size:14px;transition:transform .15s,filter .15s}.button:active{transform:scale(.97)}.primary{background:linear-gradient(100deg,#cb4576,#ed8a8c);color:white}.gold{background:linear-gradient(105deg,#d8a96a,#f7d69b);color:#241324}.secondary{background:#382637;color:#ffedf2;border:1px solid #76506c}.button:disabled{opacity:.45;cursor:not-allowed}.actiongrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.info{font-size:12px;color:var(--muted);line-height:1.6}.info strong{color:var(--cream)}.switchrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0}.switchrow input{accent-color:#e45482;width:18px;height:18px}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:15px;background:#09050be0;z-index:5;backdrop-filter:blur(6px)}.modal.show{display:flex}.dialog{max-width:520px;width:100%;max-height:90svh;overflow:auto;padding:23px;background:#281a29;border:1px solid #9a647b;border-radius:19px;box-shadow:0 25px 100px #000}.dialog h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:27px;margin:6px 0 10px}.dialog p,.dialog li{color:#e5cfd9;line-height:1.65;font-size:14px}.dialog ul{padding-left:19px}.dialog .button{margin-top:10px}.finish{display:none;text-align:center;padding:30px}.finish.show{display:block}.footer{text-align:center;font-size:11px;color:#977c8c;margin-top:20px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.chip{color:#efcdd7;border:1px solid #7b4a62;background:#241626;border-radius:30px;padding:7px 11px;font-size:11px;font-weight:700}.chip.on{color:#271421;background:#e9bd91;border-color:#e9bd91}@media(max-width:760px){.game{grid-template-columns:1fr}.card{min-height:505px}.app{max-width:560px}.heading{margin:12px 0}.panel{padding:16px}.controls{gap:11px}.back{padding:20px 19px}.art{height:190px}}@media(prefers-reduced-motion:reduce){.card{transition:none}.button{transition:none}}
-</style></head><body><main class="app"><header class="top"><div><div class="eyebrow">Un juego para dos · +18</div><div class="logo">AFTER <span>DARK</span></div></div><button class="smallbtn" id="rulesBtn">♡ Reglas y límites</button></header><section class="heading"><h1>50 cartas para encender la noche</h1><p>Besos, juegos de cercanía, poses y sorpresas. Todo a su ritmo y con consentimiento.</p></section><div class="game"><section><div class="frame"><div class="card" id="card" role="button" tabindex="0" aria-label="Voltear carta"><div class="face front"><div class="orn"></div><div class="frontmark">♥</div><div class="frontname">AFTER DARK</div><div class="frontsub">Toca para revelar</div></div><div class="face back"><div class="orn"></div><span class="tag" id="tag"></span><div class="art" id="art"></div><h2 id="ctitle"></h2><p class="desc" id="desc"></p><div class="time" id="duration"></div></div></div></div><div class="cardnote" id="hint">Toca la carta para descubrir el reto</div></section><aside class="controls"><div class="panel"><div class="eyebrow">Turnos</div><div class="players"><div class="player active" id="p0"><label>Jugador 1</label><input id="name0" maxlength="22" value="Tú" aria-label="Nombre jugador 1"></div><div class="player" id="p1"><label>Jugador 2</label><input id="name1" maxlength="22" value="Tu pareja" aria-label="Nombre jugador 2"></div></div><div class="status"><span>Turno de <strong id="turn">Tú</strong></span><span><strong id="count">0</strong>/50 cartas</span></div><div class="track"><div id="progress"></div></div><button class="button gold" id="reveal">Revelar carta ✦</button><div class="actiongrid" style="margin-top:9px"><button class="button primary" id="accept" disabled>✓ Completado</button><button class="button secondary" id="skip" disabled>↷ Saltar</button></div><button class="button secondary" style="margin-top:9px" id="reset">Reiniciar baraja</button></div><div class="panel"><div class="eyebrow">Personaliza la noche</div><div class="switchrow"><label for="poses">Incluir poses con ilustración referencial</label><input type="checkbox" id="poses" checked></div><div class="switchrow"><label for="blindfold">Incluir retos con venda opcional</label><input type="checkbox" id="blindfold" checked></div><div class="switchrow"><label for="wardrobe">Incluir retos con prendas opcionales</label><input type="checkbox" id="wardrobe" checked></div><p class="info">Los ajustes se aplican al reiniciar la baraja. Los límites se mantienen aun con los ojos cerrados; nunca restrinjan movimientos ni impongan retos.</p></div><div class="panel"><div class="eyebrow">Acuerdo de pareja</div><p class="info"><strong>Antes de empezar:</strong> acuerden qué tipos de contacto aceptan. Cualquiera puede decir «alto», cambiar o saltar una carta sin explicaciones. Las cuatro cartas extra son opcionales: nunca hay castigos por rechazar.</p></div></aside></div><div class="footer">AFTER DARK · Edición Pasión · Juega con respeto, comodidad y consentimiento continuo.</div></main><div class="modal show" id="rules"><div class="dialog"><div class="eyebrow">Antes de comenzar</div><h2>Una noche a su ritmo ♡</h2><p>Esta baraja incluye 50 cartas en seis categorías. Las poses cuentan con ilustraciones simbólicas no explícitas, no diagramas técnicos del Kamasutra.</p><ul><li>Solo adultos y participación voluntaria.</li><li>Acuerden de antemano zonas de contacto, prendas, vendas y límites.</li><li>Pregunten antes de tocar o besar. El silencio no significa consentimiento.</li><li>Una venda es opcional; nunca inmovilicen ni bloqueen la posibilidad de parar.</li><li>Las prendas solo las retira quien las lleva, si quiere.</li><li>«Saltar» no tiene castigo, y cualquier reto puede interrumpirse. Las cartas extra no se activan por rechazar una carta.</li></ul><button class="button gold" id="closeRules">Entendido, jugar ♥</button></div></div><div class="modal" id="finished"><div class="dialog finish show"><div style="font-size:44px">♥</div><h2>La noche continúa</h2><p>Han recorrido las cartas seleccionadas. Ahora pueden disfrutar del momento a su manera.</p><button class="button gold" id="again">Volver a empezar</button></div></div>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+:root{--bg:#0c0507;--panel:#1a0b0f;--line:#4a1c26;--red:#d7263d;--red2:#ff4d6d;--gold:#f0c27b;--cream:#fff1ec;--muted:#c29aa3}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{background:radial-gradient(ellipse at 50% -20%,#5a0f1f 0,transparent 60%),radial-gradient(ellipse at 100% 110%,#3a0a18 0,transparent 50%),var(--bg);color:var(--cream);font-family:'DM Sans',system-ui,sans-serif;min-height:100svh}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.app{max-width:520px;margin:auto;padding:18px 16px 40px}
+.logo{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;text-align:center;letter-spacing:1px;margin:6px 0 2px}
+.logo em{color:var(--red2);font-style:italic}
+.sub{text-align:center;color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.screen{display:none}.screen.on{display:block;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.panel{background:linear-gradient(160deg,#220d13,#140709);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}
+.eyebrow{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h2{font-family:'Playfair Display',serif;margin:0 0 8px;font-size:24px}
+p{line-height:1.55;color:#ecd3d8;font-size:14px;margin:0 0 10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label.f{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}
+input[type=text],select,textarea{width:100%;background:#0e0507;border:1px solid var(--line);border-radius:12px;padding:12px;outline:none}
+input[type=text]:focus,select:focus,textarea:focus{border-color:var(--red2)}
+.btn{width:100%;border:0;border-radius:14px;padding:15px;font-weight:800;font-size:15px;transition:transform .12s,opacity .2s}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.35}
+.red{background:linear-gradient(100deg,#b0102a,#ff4d6d);color:#fff;box-shadow:0 8px 30px #d7263d40}
+.gold{background:linear-gradient(100deg,#d9a35a,#f7d79c);color:#2a0c12}
+.ghost{background:#2a0f16;border:1px solid var(--line);color:var(--cream)}
+.stack>*+*{margin-top:10px}
+.check{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #2d1219;font-size:14px}
+.check:last-child{border:0}
+.check input{width:20px;height:20px;accent-color:var(--red2);flex:none}
+.tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;border:1px solid #7a2c3b;border-radius:30px;padding:6px 11px;color:var(--gold)}
+/* game */
+.acthead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.acthead .act{font-family:'Playfair Display',serif;font-size:19px}
+.acthead .act small{display:block;font-family:'DM Sans';font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.bar{height:5px;background:#3a1720;border-radius:9px;overflow:hidden;margin-bottom:14px}
+.bar div{height:100%;background:linear-gradient(90deg,#b0102a,#f0c27b);width:0;transition:width .4s}
+.turn{text-align:center;font-size:14px;color:var(--muted);margin-bottom:10px}
+.turn b{color:var(--cream);font-size:17px}
+.card{position:relative;min-height:330px;border-radius:24px;padding:24px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(circle at 50% 0%,#5c1424,#1c080d 70%);border:1.5px solid #8a2f42;box-shadow:0 20px 60px #000a,0 0 60px #d7263d22;overflow:hidden}
+.card:before{content:"";position:absolute;inset:10px;border:1px solid #f0c27b30;border-radius:17px;pointer-events:none}
+.card.back{cursor:pointer;background:radial-gradient(circle at 50% 45%,#7a1730,#250a11 65%)}
+.card .big{font-size:64px;line-height:1}
+.card .ttl{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold)}
+.card .txt{font-family:'Playfair Display',serif;font-size:22px;line-height:1.35;color:#fff3ef}
+.card .who{font-size:12px;color:var(--muted)}
+.flip{animation:flip .5s}
+@keyframes flip{0%{transform:rotateY(90deg)}100%{transform:rotateY(0)}}
+.timer{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px}
+.timer .clock{font-variant-numeric:tabular-nums;font-size:30px;font-weight:800;min-width:90px}
+.timer button{border:1px solid #8a2f42;background:#2a0f16;border-radius:30px;padding:9px 16px;font-weight:800;font-size:13px}
+.timer.done .clock{color:var(--red2);animation:pulse .6s 3}
+@keyframes pulse{50%{transform:scale(1.25)}}
+.powers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.power{border:1px solid #7a2c3b;background:#1d0a0f;border-radius:14px;padding:10px 4px;font-size:12px;font-weight:800;text-align:center}
+.power span{display:block;font-size:20px;margin-bottom:3px}
+.power:disabled{opacity:.3}
+.dice{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.die{background:#f7e9e3;color:#3a0a14;border-radius:12px;padding:10px 12px;font-weight:800;font-size:14px;min-width:84px;box-shadow:0 6px 0 #b98b86}
+.die.roll{animation:shake .5s}
+@keyframes shake{25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+.fant{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:14px;margin-bottom:8px;background:#140709}
+.fant input{width:22px;height:22px;accent-color:var(--red2);flex:none}
+.fant.match{border-color:var(--gold);background:#2e1410}
+.modal{position:fixed;inset:0;background:#050203e6;backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px;z-index:9}
+.modal.on{display:flex}
+.modal .panel{max-width:480px;width:100%;max-height:90svh;overflow:auto;margin:0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a0f16;border:1px solid var(--gold);padding:10px 16px;border-radius:30px;font-size:13px;font-weight:700;opacity:0;transition:opacity .3s;pointer-events:none;z-index:10}
+.toast.on{opacity:1}
+.mini{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.customlist{font-size:13px;color:#e8c9cf;margin-top:8px}
+.customlist div{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #2d1219}
+.customlist button{background:none;border:0;color:var(--red2);font-weight:800}
+.topbtns{display:flex;justify-content:space-between;gap:8px;margin-top:10px}
+.topbtns button{flex:1;font-size:12px;padding:10px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="app">
+  <div class="logo">Noche de <em>Pasión</em></div>
+  <div class="sub">Un juego para dos · Solo adultos</div>
+
+  <!-- 1. CONFIGURACIÓN -->
+  <section class="screen on" id="sSetup">
+    <div class="panel">
+      <div class="eyebrow">Los jugadores</div>
+      <div class="row">
+        <div><label class="f" for="nEl">Él</label><input type="text" id="nEl" maxlength="18" placeholder="Nombre de él"></div>
+        <div><label class="f" for="nElla">Ella</label><input type="text" id="nElla" maxlength="18" placeholder="Nombre de ella"></div>
+      </div>
+      <div style="margin-top:12px"><label class="f" for="safe">Palabra de pausa (opcional)</label><input type="text" id="safe" maxlength="20" placeholder="Ej.: rojo"></div>
+    </div>
+
+    <div class="panel">
+      <div class="eyebrow">Tengan a mano 🛒</div>
+      <div id="kit"></div>
+    </div>
+
+    <div class="panel">
+      <div class="eyebrow">Cómo se juega</div>
+      <p><b>4 actos</b> que suben de intensidad: Calentando 🌶️, Provocación 🌶️🌶️, Sin frenos 🌶️🌶️🌶️ y Fantasías 🔥.</p>
+      <p>💃 Los <b>bailes</b> le tocan siempre a ella. 💆 Los <b>masajes</b> se los da él a ella. 💋 Ella besa la parte de él que más le guste.</p>
+      <p>🃏 Cada uno tiene 3 cartas de poder: <b>Veto</b> (cambia tu carta), <b>Espejo</b> (devuélvela) y <b>Doble o nada</b> (doble de tiempo).</p>
+    </div>
+
+    <div class="panel">
+      <div class="eyebrow">Sus propias cartas ✍️</div>
+      <textarea id="cText" rows="2" maxlength="160" placeholder="Escribe un reto…"></textarea>
+      <div class="row" style="margin-top:8px">
+        <select id="cAct"><option value="0">Acto 1</option><option value="1">Acto 2</option><option value="2" selected>Acto 3</option><option value="3">Acto 4</option></select>
+        <select id="cWho"><option value="any">Cualquiera</option><option value="ella">Ella</option><option value="el">Él</option></select>
+      </div>
+      <button class="btn ghost" style="margin-top:8px" id="cAdd">+ Añadir carta</button>
+      <div class="customlist" id="cList"></div>
+    </div>
+
+    <button class="btn red" id="goFant">Empezar la noche 🔥</button>
+  </section>
+
+  <!-- 2. FANTASÍAS SECRETAS -->
+  <section class="screen" id="sPass">
+    <div class="panel" style="text-align:center;padding:36px 20px">
+      <div style="font-size:54px">🤫</div>
+      <h2 id="passTitle"></h2>
+      <p id="passText"></p>
+      <button class="btn red" id="passGo">Estoy listo/a</button>
+    </div>
+  </section>
+
+  <section class="screen" id="sFant">
+    <div class="panel">
+      <div class="eyebrow">Fantasías secretas</div>
+      <h2 id="fantTitle"></h2>
+      <p>Marca lo que te gustaría. Solo se revelará en el Acto 4 lo que <b>los dos</b> marquen.</p>
+      <div id="fantList"></div>
+    </div>
+    <button class="btn red" id="fantDone">Listo, guardar en secreto</button>
+  </section>
+
+  <!-- 3. JUEGO -->
+  <section class="screen" id="sGame">
+    <div class="acthead">
+      <div class="act" id="actName"></div>
+      <div class="tag" id="actChili"></div>
+    </div>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="turn">Turno de <b id="turnName"></b></div>
+
+    <div class="card back" id="card"></div>
+
+    <div id="afterReveal" style="display:none">
+      <div class="powers" id="powers"></div>
+      <button class="btn red" id="done">✓ Hecho, siguiente</button>
+    </div>
+    <div class="topbtns">
+      <button class="btn ghost" id="diceBtn">🎲 Dados de la pasión</button>
+      <button class="btn ghost" id="skipAct">Saltar al siguiente acto ›</button>
+    </div>
+    <div class="mini" id="safeNote"></div>
+  </section>
+
+  <!-- 4. FINAL -->
+  <section class="screen" id="sEnd">
+    <div class="panel" style="text-align:center;padding:36px 20px">
+      <div style="font-size:54px">❤️‍🔥</div>
+      <h2>La noche es suya</h2>
+      <p>Se acabaron las cartas… pero no la noche. Apaguen el móvil y disfruten.</p>
+      <button class="btn gold" id="again">Jugar otra vez</button>
+    </div>
+  </section>
+</main>
+
+<!-- modal entre actos -->
+<div class="modal" id="mAct"><div class="panel" style="text-align:center">
+  <div class="eyebrow" id="mActNum"></div>
+  <div style="font-size:48px" id="mActIcon"></div>
+  <h2 id="mActName"></h2>
+  <p id="mActText"></p>
+  <div id="mActExtra"></div>
+  <button class="btn red" id="mActGo" style="margin-top:8px">Comenzar</button>
+</div></div>
+
+<!-- modal dados -->
+<div class="modal" id="mDice"><div class="panel" style="text-align:center">
+  <div class="eyebrow">Dados de la pasión</div>
+  <p id="diceWho"></p>
+  <div class="dice" id="diceBox"></div>
+  <div class="timer" id="diceTimer"></div>
+  <div class="stack" style="margin-top:14px">
+    <button class="btn gold" id="diceRoll">🎲 Tirar otra vez</button>
+    <button class="btn ghost" id="diceClose">Cerrar</button>
+  </div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
 <script>
-const C=[["Beso en el cuello", "Bésale el cuello suavemente durante 30 segundos, si le gusta.", "CALENTAMIENTO", 30], ["Al oído", "Dile al oído qué es lo que más te atrae de su cuerpo.", "CALENTAMIENTO", 30], ["Recuerdo intenso", "Comparte un recuerdo especialmente apasionado de ustedes.", "CALENTAMIENTO", 60], ["Desafío de una prenda", "Invita a tu pareja a retirarse una prenda voluntariamente; eviten usar los dientes.", "CALENTAMIENTO", 45], ["En tus piernas", "Siéntate en su regazo, si ambos están cómodos, y compartan un beso sin usar las manos.", "CALENTAMIENTO", 60], ["Tres besos a ciegas", "Con una venda opcional y zonas acordadas, da tres besos y pide que adivine dónde fue el último.", "CALENTAMIENTO", 60], ["Confesión picante", "Confiesa algo que siempre has querido proponer y aún no has conversado.", "CALENTAMIENTO", 60], ["Muy despacio", "Invita a tu pareja a desabrocharse voluntariamente una prenda mientras se miran a los ojos.", "CALENTAMIENTO", 45], ["Beso de un minuto", "Compartan un beso largo, haciendo las pausas que necesiten.", "CALENTAMIENTO", 60], ["Una prenda menos", "Tu pareja propone una prenda; tú decides si quieres quitártela.", "CALENTAMIENTO", 45], ["Masaje con aceite", "Haz un masaje de espalda de tres minutos con aceite apto para la piel, si ambos lo desean.", "PREVIO", 180], ["Frío y calor", "Prueben un contacto fresco en la mano o el brazo y después un beso sobre esa zona, evitando molestias.", "PREVIO", 90], ["Pañuelo sorpresa", "Usen un pañuelo como parte de un juego de baile, sin inmovilizar manos ni restringir movimientos.", "PREVIO", 60], ["Baile privado", "Dedica dos minutos a un baile sensual; puedes cambiar o quitarte una prenda voluntariamente.", "PREVIO", 120], ["Sin manos", "Durante un minuto, jueguen con besos acordados sin usar las manos.", "PREVIO", 60], ["Tú marcas el ritmo", "Durante dos minutos, una persona propone gestos de afecto; la otra puede aceptar, cambiar o parar.", "PREVIO", 120], ["Dulce tentación", "Compartan un pequeño bocado de chocolate y terminen con un beso; eviten aplicarlo en zonas sensibles.", "PREVIO", 60], ["Susurros de medianoche", "Susurra cómo imaginas los próximos minutos de su noche romántica.", "PREVIO", 60], ["Pluma misteriosa", "Con ojos cerrados, recibe una caricia de pluma o de dedos en brazos u hombros, si lo acuerdan.", "PREVIO", 90], ["Déjate guiar", "Durante cinco minutos, quien recibe el masaje guía el ritmo y la zona de contacto con palabras.", "PREVIO", 300], ["Mordisco juguetón", "Pregunta si le agrada un mordisco muy suave y, solo si acepta, elijan una zona segura.", "PREVIO", 45], ["Provócame", "Intenta hacer sonreír o sonrojar a tu pareja durante dos minutos con besos y gestos coquetos.", "PREVIO", 120], ["El Loto", "Sentados frente a frente, uno sobre el regazo del otro si es cómodo, abrácense y mantengan contacto visual.", "POSE", 120], ["La Amazona", "Recreen una pose de pareja sentada en la que una persona marca los movimientos del abrazo.", "POSE", 120], ["Amazona invertida", "Prueben una variante de abrazo sentado con una persona de espaldas, solo si es estable y cómoda.", "POSE", 120], ["La Cucharita", "Acuéstense de lado, uno detrás del otro, y compartan un abrazo lento.", "POSE", 120], ["El Perrito — versión abrazo", "Una persona se arrodilla cómodamente sobre cojines y la otra se acerca para un abrazo por detrás; sin presión física.", "POSE", 60], ["La Mariposa", "Una persona se recuesta cómodamente sobre la cama; la otra se coloca frente a ella y se toman de las manos.", "POSE", 90], ["El Misionero — abrazo", "Recostados frente a frente, acomódense con almohadas y abrácense sin apoyar peso sobre la otra persona.", "POSE", 90], ["La Silla", "Una persona se sienta en una silla estable y la otra se acomoda en el regazo, si resulta seguro.", "POSE", 120], ["De pie junto a la pared", "De pie junto a una pared, compartan un abrazo y un beso, dejando suficiente espacio y apoyo.", "POSE", 60], ["Las Tijeras", "Recostados de lado, entrelacen suavemente las piernas en una postura cómoda y abrácense.", "POSE", 90], ["El Yunque — adaptación", "Una persona se recuesta con piernas apoyadas en cojines mientras la otra le toma suavemente las manos.", "POSE", 60], ["La Carretilla — adaptación", "En lugar de levantar el peso de alguien, hagan una pose divertida de equilibrio tomados de las manos.", "POSE", 45], ["Otra vez", "Tu pareja elige una pose romántica del mazo para repetir; ambos acuerdan la duración.", "FANTASÍA", 120], ["Un encuentro inesperado", "Interpreten por diez minutos a dos desconocidos que se conocen en un bar imaginario.", "FANTASÍA", 600], ["A tus órdenes, con límites", "Durante unos minutos, una persona propone retos afectuosos que la otra acepta libremente uno por uno.", "FANTASÍA", 180], ["Nuevo escenario", "Elijan otra habitación cómoda de la casa y sigan jugando allí.", "FANTASÍA", 90], ["Frente al espejo", "Realicen la siguiente carta frente a un espejo si ambos quieren.", "FANTASÍA", 60], ["Un deseo compartido", "Cada uno propone un deseo íntimo y ambos deciden libremente si desean explorarlo en otro momento.", "FANTASÍA", 90], ["En silencio", "Intenten sostener un abrazo en silencio durante cinco minutos; pueden hablar o detenerse cuando quieran.", "FANTASÍA", 300], ["Una fantasía pendiente", "Elijan juntos una experiencia romántica nueva y, si los dos quieren, pongan una fecha.", "FANTASÍA", 90], ["Intercambio", "Puedes pasar este reto a tu pareja; quien lo reciba puede aceptarlo o saltarlo.", "COMODÍN", 0], ["Doble", "Propongan hacer juntos la siguiente carta, solo si ambos aceptan.", "COMODÍN", 0], ["Tú eliges", "Elige cualquier carta de la baraja y propón realizarla; ambos pueden pasar.", "COMODÍN", 0], ["Pausa", "Salta un reto o tómate un descanso, sin dar explicaciones.", "COMODÍN", 0], ["Dos prendas — opcional", "Si te apetece, puedes quitarte dos prendas por tu propia decisión.", "EXTRA", 45], ["Repite una pose", "Tu pareja sugiere una pose de cercanía del mazo; ambos eligen si la hacen.", "EXTRA", 90], ["Manos a la vista", "Durante dos rondas, propongan retos que no requieran usar las manos, sin sujetarlas ni atarlas.", "EXTRA", 90], ["La ronda a tu gusto", "Tu pareja propone la dinámica de una ronda; ambos deben estar de acuerdo.", "EXTRA", 90]] .map((x,i)=>({id:i+1,title:x[0],text:x[1],type:x[2],seconds:x[3]}));
-const qs=s=>document.querySelector(s);let deck=[],idx=0,active=0,flipped=false,seen=false;const icons={CALENTAMIENTO:'♥',PREVIO:'✧',POSE:'❀',FANTASÍA:'☾',COMODÍN:'✦',EXTRA:'♛'};
-function svg(type,variant){const base='<svg viewBox="0 0 300 190" aria-label="Ilustración artística de pareja, no explícita" role="img"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8d8b1"/><stop offset="1" stop-color="#df789b"/></linearGradient></defs><ellipse cx="150" cy="167" rx="105" ry="12" fill="#a2586b" opacity=".18"/><circle cx="106" cy="61" r="22" fill="url(#g)"/><circle cx="191" cy="61" r="22" fill="url(#g)"/><path d="M82 85 Q67 104 72 145 L126 145 Q143 104 124 85 Z" fill="#d58aa2"/><path d="M172 85 Q157 104 161 145 L217 145 Q230 110 207 85 Z" fill="#e0b189"/><path d="M126 105 Q145 121 164 105" stroke="#f6cfae" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M82 103 Q91 121 113 128 M216 103 Q205 121 188 128" stroke="#f5cdab" stroke-width="9" fill="none" stroke-linecap="round"/>';
-const pose='<path d="M91 145 L78 163 M116 145 L127 163 M175 145 L164 163 M204 145 L218 163" stroke="#dba9a9" stroke-width="12" stroke-linecap="round"/><path d="M64 167 H232" stroke="#a66a7b" stroke-width="2"/>';
-const extra= type==='VENDA'?'<path d="M84 59 Q105 52 126 59 M169 59 Q190 52 212 59" stroke="#44233d" stroke-width="10" fill="none"/>':type==='BESOS'?'<path d="M145 41 C137 27 124 37 145 54 C167 36 154 25 145 41Z" fill="#e96f90"/>':type==='POSE'?'<circle cx="150" cy="76" r="61" fill="none" stroke="#bb8095" opacity=".35" stroke-dasharray="4 8"/>':type==='CARICIAS'?'<path d="M145 34 l6 10 10 2 -10 5 -6 10 -4 -10 -10 -5 10 -2Z" fill="#f3cb8d"/>':type==='PRENDAS'?'<path d="M75 93 l-15 23 m161-23 15 23" stroke="#fff0d3" stroke-width="6" stroke-linecap="round"/>':'<path d="M144 30 C126 9 109 31 144 56 C180 31 163 9 144 30Z" fill="#e96f90"/>';
-return base+pose+extra+'</svg>'}
-function shuffle(a){for(let j=a.length-1;j>0;j--){let k=Math.floor(Math.random()*(j+1));[a[j],a[k]]=[a[k],a[j]]}return a}
-function filtered(){return C.filter(c=>(c.type!=='POSE'||qs('#poses').checked)&&(![6,19].includes(c.id)||qs('#blindfold').checked)&&(![4,8,10,14,47].includes(c.id)||qs('#wardrobe').checked))}
-function setDisabled(v){qs('#accept').disabled=v;qs('#skip').disabled=v}
-function names(){qs('#turn').textContent=qs('#name'+active).value.trim()||`Jugador ${active+1}`;[0,1].forEach(i=>qs('#p'+i).classList.toggle('active',i===active))}
-function load(){deck=shuffle(filtered());idx=0;active=0;seen=false;flipped=false;qs('#card').classList.remove('flipped');qs('#reveal').disabled=false;qs('#reveal').textContent='Revelar carta ✦';setDisabled(true);qs('#hint').textContent='Toca la carta para descubrir el reto';qs('#count').textContent='0';qs('#progress').style.width='0%';qs('#finished').classList.remove('show');names();try{localStorage.setItem('ad_names',JSON.stringify([qs('#name0').value,qs('#name1').value]))}catch(e){}}
-function show(){if(idx>=deck.length){qs('#finished').classList.add('show');return}if(flipped)return;let c=deck[idx];qs('#tag').textContent=`Carta ${String(c.id).padStart(2,'0')} · ${c.type==='POSE'?'POSE · SILUETA REFERENCIAL':c.type}`;qs('#ctitle').textContent=c.title;qs('#desc').textContent=c.text;qs('#duration').textContent=`${c.seconds ? `Tiempo sugerido: ${c.seconds} segundos` : "Comodín"} · Siempre opcional`;qs('#art').innerHTML=svg(c.type,c.id);qs('#card').classList.add('flipped');flipped=true;seen=true;setDisabled(false);qs('#reveal').disabled=true;qs('#reveal').textContent='Carta revelada';qs('#hint').textContent='Completar o saltar: ambas opciones avanzan sin penalización'}
-function next(){if(!seen)return;idx++;active=1-active;seen=false;flipped=false;qs('#card').classList.remove('flipped');qs('#reveal').disabled=false;qs('#reveal').textContent='Revelar carta ✦';setDisabled(true);qs('#count').textContent=String(idx);qs('#progress').style.width=`${100*idx/deck.length}%`;qs('#hint').textContent='Toca la carta para descubrir el reto';names();if(idx>=deck.length){setTimeout(()=>qs('#finished').classList.add('show'),200)}}
-qs('#card').addEventListener('click',show);qs('#card').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});qs('#reveal').onclick=show;qs('#accept').onclick=next;qs('#skip').onclick=next;qs('#reset').onclick=()=>{if(confirm('¿Reiniciar y barajar las cartas?'))load()};qs('#again').onclick=load;qs('#rulesBtn').onclick=()=>qs('#rules').classList.add('show');qs('#closeRules').onclick=()=>qs('#rules').classList.remove('show');[0,1].forEach(i=>qs('#name'+i).addEventListener('input',()=>{names();try{localStorage.setItem('ad_names',JSON.stringify([qs('#name0').value,qs('#name1').value]))}catch(e){}}));try{let n=JSON.parse(localStorage.getItem('ad_names')||'null');if(Array.isArray(n)){qs('#name0').value=n[0]||'Tú';qs('#name1').value=n[1]||'Tu pareja'}}catch(e){}load();
-</script></body></html>
+/* ============ DATOS ============ */
+const KIT=['🕯️ Velas','🧊 Cubitos de hielo','💧 Aceite de masaje','🎀 Una venda o pañuelo','🎵 Música sensual lista','🍫 Algo dulce (chocolate, fresas)','🛁 Toallas'];
+
+const ACTS=[
+ {name:'Calentando',chili:'🌶️',icon:'🕯️',turns:8,text:'Miradas, susurros y besos. Sin prisa: la noche apenas empieza.'},
+ {name:'Provocación',chili:'🌶️🌶️',icon:'💋',turns:10,text:'Empieza a sobrar la ropa. Ojos vendados, hielo y el primer baile.'},
+ {name:'Sin frenos',chili:'🌶️🌶️🌶️',icon:'🔥',turns:10,text:'Aceite, piel y nada de prisa. Aquí ya no hay vuelta atrás.'},
+ {name:'Fantasías',chili:'🔥🔥🔥',icon:'😈',turns:4,text:'Se revelan las fantasías que los dos marcaron en secreto.'}
+];
+
+// [quién, segundos, texto]  · {o} = nombre de la pareja
+const CARDS=[
+ [ // ACTO 1
+  ['any',30,'Dile al oído a {o} qué fue lo primero que te atrajo de su cuerpo.'],
+  ['any',30,'Bésale el cuello a {o} durante 30 segundos sin usar las manos.'],
+  ['any',45,'Recorre los labios de {o} con un dedo, muy despacio… y luego bésalos.'],
+  ['any',0,'Susúrrale a {o} tres cosas que quieres hacerle esta noche.'],
+  ['any',60,'Cuéntale a {o} tu recuerdo más apasionado juntos, con todos los detalles.'],
+  ['any',30,'Mírense a los ojos 30 segundos sin hablar. Quien se ría, se quita una prenda.'],
+  ['any',45,'Llena de besos a {o} desde la muñeca hasta el hombro.'],
+  ['any',0,'Confiésale a {o} algo que te excita y que nunca le hayas dicho.'],
+  ['any',60,'Beso lento de 1 minuto. Prohibido separarse antes de tiempo.'],
+  ['any',0,'Dile a {o} qué prenda suya te provoca más… y qué harías con ella.'],
+  ['ella',60,'💃 Baile coqueto: baila 1 minuto para {o} mientras te mira. Él no puede tocarte.'],
+  ['ella',30,'💋 Besa la parte del cuerpo de {o} que más te guste.']
+ ],
+ [ // ACTO 2
+  ['any',0,'Quítale una prenda a {o} usando solo los dientes.'],
+  ['any',60,'Venda los ojos de {o} y bésale en tres lugares distintos. Tiene que adivinar dónde fue cada beso.'],
+  ['any',45,'Quítate una prenda de la forma más lenta y provocadora que puedas.'],
+  ['any',60,'Recorre con besos el cuerpo de {o} desde el cuello hasta el ombligo.'],
+  ['any',45,'Pasa un cubito de hielo por el cuello de {o} y sigue el rastro con tus labios.'],
+  ['any',60,'Un minuto entero solo con los labios. Nada de manos.'],
+  ['any',0,'Susúrrale a {o} qué parte de su cuerpo quieres probar primero.'],
+  ['any',0,'Tú eliges: le quitas una prenda a {o} o te quitas una tú.'],
+  ['any',30,'Mordisquea suavemente el labio de {o} y no lo sueltes hasta que sonría.'],
+  ['any',45,'Bésale detrás de la oreja a {o} mientras le cuentas algo atrevido que quieres hacerle.'],
+  ['dice'],['dice'],
+  ['ella',120,'💃 Lap dance: baila 2 minutos sentada en el regazo de {o}. Él tiene prohibido usar las manos.'],
+  ['ella',90,'💃 Venda los ojos de {o} y baila a su alrededor, rozándolo, sin dejar que te toque.'],
+  ['ella',30,'💋 Besa la parte del cuerpo de {o} que más te guste… y quédate ahí 30 segundos.']
+ ],
+ [ // ACTO 3
+  ['any',90,'Hielo y fuego: alterna un cubito de hielo y tu boca por el abdomen de {o}.'],
+  ['any',0,'A partir de ahora, los dos en ropa interior. Si ya lo están… una prenda menos.'],
+  ['any',120,'Venda los ojos de {o}: durante 2 minutos se deja explorar por tus manos.'],
+  ['any',0,'Toma la mano de {o} y guíala por tu cuerpo hasta donde tú quieras.'],
+  ['any',120,'Tú decides: durante 2 minutos, {o} te besa solo donde tú le indiques.'],
+  ['any',60,'Besa a {o} en una zona que todavía nadie haya besado esta noche.'],
+  ['any',300,'A la ducha: 5 minutos de agua caliente y manos con jabón.'],
+  ['any',180,'Elijan juntos su posición favorita y llévense a la cama 3 minutos. Luego vuelven al juego… si pueden.'],
+  ['any',0,'El siguiente reto se hace sin ninguna prenda.'],
+  ['any',60,'Sopla suavemente por todo el cuerpo de {o} y termina con un beso donde más reaccione.'],
+  ['dice'],['dice'],
+  ['ella',180,'💃 Striptease completo para {o} con la canción que tú elijas.'],
+  ['ella',90,'💃 Baila sobre {o}, frente a frente, sin dejar que te toque con las manos.'],
+  ['ella',30,'💋 Besa la parte del cuerpo de {o} que más te guste durante 30 segundos sin parar.'],
+  ['ella',45,'💋 Con los ojos de {o} vendados, besa la parte de su cuerpo que más te guste. Que adivine cuál fue.']
+ ],
+ [ // ACTO 4
+  ['any',0,'Último deseo: pídele a {o} una cosa, la que quieras, para terminar la noche.'],
+  ['any',120,'Recorre todo el cuerpo de {o} con besos, de los pies a los labios.'],
+  ['any',0,'Tú decides cómo y dónde sigue la noche.'],
+  ['ella',0,'💃 Último baile para {o}. El final lo decides tú.']
+ ]
+];
+
+// Masajes: él → ella. Zonas y estilo según el acto.
+const MASSAGE={
+ zones:[
+  ['el cuello','los hombros','la espalda','los pies'],
+  ['las piernas','la espalda','la cadera','el abdomen','los muslos'],
+  ['las nalgas','el pecho','los muslos','la espalda baja','las piernas'],
+  ['todo el cuerpo']
+ ],
+ styles:[
+  [' con las yemas de los dedos',' muy despacio',' en círculos suaves'],
+  [' con aceite',' de abajo hacia arriba',' alternando caricias y besos'],
+  [' con aceite tibio',' con aceite y sin ninguna prisa',' terminando cada pasada con un beso'],
+  [' con aceite, de pies a cabeza']
+ ],
+ count:[3,4,4,1],
+ time:[[60,90],[90,120],[120,180],[300]]
+};
+
+const DICE={
+ action:['Besa','Acaricia','Muerde suave','Sopla','Lame','Masajea','Susurra en','Roza con los labios'],
+ zone:['el cuello','los labios','la oreja','el pecho','el abdomen','los muslos','la espalda','las nalgas','donde quieras'],
+ time:[30,45,60,90]
+};
+
+const FANTASIES=[
+ 'Juego de roles: dos desconocidos que se conocen en un bar',
+ 'Ella con los ojos vendados toda una ronda',
+ 'Él con los ojos vendados toda una ronda',
+ 'Ducha o baño juntos',
+ 'Seguir la noche en otra habitación',
+ 'Frente al espejo',
+ 'Velas, aceite y masaje de cuerpo completo',
+ 'Striptease completo de ella',
+ 'Chocolate, crema o fruta sobre la piel',
+ 'Ella lleva el control toda la noche',
+ 'Él lleva el control toda la noche',
+ 'Lencería sorpresa',
+ 'Sin palabras: solo gestos y miradas',
+ 'Dejar la luz encendida'
+];
+
+/* ============ ESTADO ============ */
+const $=s=>document.querySelector(s);
+const S={names:{el:'Él',ella:'Ella'},fant:{el:[],ella:[]},act:0,turn:0,actor:'ella',deck:[],card:null,powers:null,custom:[]};
+const other=r=>r==='el'?'ella':'el';
+const rand=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('on',s.id===id));scrollTo(0,0)}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2200)}
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+/* ============ CONFIGURACIÓN ============ */
+$('#kit').innerHTML=KIT.map((k,i)=>`<label class="check"><input type="checkbox" id="k${i}">${k}</label>`).join('');
+const saved=store.get('np_names',null);if(saved){$('#nEl').value=saved.el||'';$('#nElla').value=saved.ella||''}
+$('#safe').value=store.get('np_safe','');
+S.custom=store.get('np_custom',[]);
+function renderCustom(){
+  const W={any:'Cualquiera',ella:'Ella',el:'Él'};
+  $('#cList').innerHTML=S.custom.map((c,i)=>`<div><span>Acto ${c.act+1} · ${W[c.w]}: ${esc(c.t)}</span><button data-i="${i}" aria-label="Borrar">✕</button></div>`).join('');
+  $('#cList').querySelectorAll('button').forEach(b=>b.onclick=()=>{S.custom.splice(+b.dataset.i,1);store.set('np_custom',S.custom);renderCustom()});
+}
+renderCustom();
+$('#cAdd').onclick=()=>{const t=$('#cText').value.trim();if(!t)return;S.custom.push({t,act:+$('#cAct').value,w:$('#cWho').value});store.set('np_custom',S.custom);$('#cText').value='';renderCustom();toast('Carta añadida ✍️')};
+
+$('#goFant').onclick=()=>{
+  S.names.el=$('#nEl').value.trim()||'Él';
+  S.names.ella=$('#nElla').value.trim()||'Ella';
+  store.set('np_names',{el:$('#nEl').value.trim(),ella:$('#nElla').value.trim()});
+  store.set('np_safe',$('#safe').value.trim());
+  S.fant={el:[],ella:[]};
+  askFantasy('ella');
+};
+
+/* ============ FANTASÍAS SECRETAS ============ */
+let fantRole='ella';
+function askFantasy(role){
+  fantRole=role;
+  $('#passTitle').textContent=`Pásale el móvil a ${S.names[role]}`;
+  $('#passText').textContent=`${S.names[other(role)]}, no mires 👀. ${S.names[role]} va a elegir sus fantasías en secreto.`;
+  show('sPass');
+}
+$('#passGo').onclick=()=>{
+  $('#fantTitle').textContent=`${S.names[fantRole]}, ¿qué te gustaría?`;
+  $('#fantList').innerHTML=FANTASIES.map((f,i)=>`<label class="fant"><input type="checkbox" value="${i}">${f}</label>`).join('');
+  show('sFant');
+};
+$('#fantDone').onclick=()=>{
+  S.fant[fantRole]=[...$('#fantList').querySelectorAll('input:checked')].map(i=>+i.value);
+  $('#fantList').innerHTML='';
+  if(fantRole==='ella')askFantasy('el');else startGame();
+};
+
+/* ============ JUEGO ============ */
+function buildDeck(a){
+  const d=CARDS[a].map(c=>c[0]==='dice'?{w:'any',dice:true}:{w:c[0],s:c[1],t:c[2]});
+  const zs=shuffle([...MASSAGE.zones[a]]);
+  for(let i=0;i<MASSAGE.count[a];i++){
+    const s=rand(MASSAGE.time[a]);
+    d.push({w:'el',s,t:`💆 Masajea ${zs[i%zs.length]} de {o}${rand(MASSAGE.styles[a])}.`});
+  }
+  S.custom.filter(c=>c.act===a).forEach(c=>d.push({w:c.w,s:0,t:c.t,custom:true}));
+  return shuffle(d);
+}
+function startGame(){
+  S.powers={el:{veto:1,espejo:1,doble:1},ella:{veto:1,espejo:1,doble:1}};
+  const sw=$('#safe').value.trim();
+  $('#safeNote').textContent=sw?`Palabra de pausa: «${sw}». Si alguien la dice, se para todo.`:'Cualquiera puede pausar o saltar cuando quiera.';
+  enterAct(0);
+}
+function enterAct(a){
+  S.act=a;S.turn=0;S.actor='ella';S.deck=buildDeck(a);
+  const A=ACTS[a];
+  $('#mActNum').textContent=`Acto ${a+1} de 4`;
+  $('#mActIcon').textContent=A.icon;
+  $('#mActName').textContent=`${A.name} ${A.chili}`;
+  $('#mActText').textContent=A.text;
+  $('#mActExtra').innerHTML=a===3?fantasyReveal():'';
+  $('#mAct').classList.add('on');
+  show('sGame');
+  $('#actName').innerHTML=`<small>Acto ${a+1}</small>${A.name}`;
+  $('#actChili').textContent=A.chili;
+  backCard();
+}
+function fantasyReveal(){
+  const m=S.fant.el.filter(i=>S.fant.ella.includes(i));
+  if(!m.length)return `<p>Esta vez no coincidieron en ninguna fantasía… ¡pero las últimas cartas compensan! 😏</p>`;
+  const pick=rand(m);
+  S.fantasyPick=FANTASIES[pick];
+  return `<p>¡Coincidieron en ${m.length} ${m.length>1?'fantasías':'fantasía'}! 🔥</p>`+
+    m.map(i=>`<div class="fant ${i===pick?'match':''}">${i===pick?'⭐':'❤️'} ${FANTASIES[i]}</div>`).join('')+
+    `<p style="margin-top:10px">⭐ <b>La fantasía de esta noche:</b> ${FANTASIES[pick]}. Cúmplanla antes de que termine el acto.</p>`;
+}
+$('#mActGo').onclick=()=>$('#mAct').classList.remove('on');
+
+function updateHead(){
+  $('#turnName').textContent=S.names[S.actor];
+  $('#bar').style.width=(100*S.turn/ACTS[S.act].turns)+'%';
+}
+function backCard(){
+  stopTimer();
+  updateHead();
+  const c=$('#card');
+  c.className='card back flip';
+  c.innerHTML=`<div class="big">${ACTS[S.act].icon}</div><div class="ttl">Carta para ${esc(S.names[S.actor])}</div><div class="who">Toca para revelar</div>`;
+  $('#afterReveal').style.display='none';
+  void c.offsetWidth;
+}
+function draw(role){
+  let i=S.deck.findIndex(c=>c.w===role||c.w==='any');
+  if(i<0)return role==='el'
+    ?{w:'el',s:120,t:`💆 Masajea ${rand(MASSAGE.zones[Math.min(S.act,2)])} de {o}${rand(MASSAGE.styles[Math.min(S.act,2)])}.`}
+    :{w:'any',dice:true};
+  return S.deck.splice(i,1)[0];
+}
+function reveal(){
+  if(!$('#card').classList.contains('back'))return;
+  S.card=draw(S.actor);S.card.doer=S.actor;S.card.doubled=false;
+  if(S.card.dice)rollInto(S.card);
+  renderCard(true);
+}
+$('#card').onclick=reveal;
+
+function rollInto(c){c.da=rand(DICE.action);c.dz=rand(DICE.zone);c.s=rand(DICE.time)}
+
+function renderCard(anim){
+  const c=S.card,el=$('#card'),o=S.names[other(c.doer)];
+  el.className='card'+(anim?' flip':'');
+  let kind=c.dice?'🎲 Dados':c.custom?'✍️ Su carta':c.t.startsWith('💃')?'💃 Baile':c.t.startsWith('💆')?'💆 Masaje':c.t.startsWith('💋')?'💋 Beso':'Reto';
+  let body;
+  if(c.dice){
+    body=`<div class="dice"><div class="die">${c.da}</div><div class="die">${c.dz}</div><div class="die">${c.s}s</div></div><div class="txt" style="font-size:18px">${esc(S.names[c.doer])} a ${esc(o)}</div>`;
+  }else{
+    body=`<div class="txt">${esc(c.t.replace(/^(💃|💆|💋)\s*/u,'').replace(/\{o\}/g,o))}</div>`;
+  }
+  const secs=c.s*(c.doubled?2:1);
+  el.innerHTML=`<span class="tag">${kind}${c.doubled?' · x2':''}</span>${body}
+    ${secs?`<div class="timer" id="tm"><div class="clock">${fmt(secs)}</div><button id="tmBtn">▶ Iniciar</button></div>`:''}
+    ${S.act===3&&S.fantasyPick&&!c.dice?`<div class="who">⭐ Fantasía de la noche: ${esc(S.fantasyPick)}</div>`:''}`;
+  if(secs)bindTimer($('#tm'),secs);
+  renderPowers();
+  $('#afterReveal').style.display='block';
+}
+
+function renderPowers(){
+  const p=S.powers[S.actor],c=S.card;
+  const canMirror=c.w==='any'&&c.doer===S.actor;
+  $('#powers').innerHTML=
+    `<button class="power" id="pV" ${p.veto?'':'disabled'}><span>🚫</span>Veto</button>`+
+    `<button class="power" id="pE" ${p.espejo&&canMirror?'':'disabled'}><span>🪞</span>Espejo</button>`+
+    `<button class="power" id="pD" ${p.doble&&c.s&&!c.doubled?'':'disabled'}><span>✖️2</span>Doble</button>`;
+  $('#pV').onclick=()=>{p.veto=0;toast('🚫 Veto: carta nueva');S.deck.push(c);S.card=draw(S.actor);S.card.doer=S.actor;if(S.card.dice)rollInto(S.card);stopTimer();renderCard(true)};
+  $('#pE').onclick=()=>{p.espejo=0;c.doer=other(S.actor);toast(`🪞 Espejo: ahora lo hace ${S.names[c.doer]}`);stopTimer();renderCard(true)};
+  $('#pD').onclick=()=>{p.doble=0;c.doubled=true;toast('✖️2 Doble o nada: el doble de tiempo');stopTimer();renderCard(true)};
+}
+
+$('#done').onclick=()=>{
+  S.turn++;
+  if(S.turn>=ACTS[S.act].turns){
+    if(S.act<3)enterAct(S.act+1);else{stopTimer();show('sEnd')}
+    return;
+  }
+  S.actor=other(S.actor);
+  backCard();
+};
+$('#skipAct').onclick=()=>{if(S.act<3)enterAct(S.act+1);else{stopTimer();show('sEnd')}};
+$('#again').onclick=()=>show('sSetup');
+
+/* ============ TEMPORIZADOR ============ */
+let T=null;
+function stopTimer(){if(T){clearInterval(T.i);T=null}}
+function beep(){
+  try{navigator.vibrate&&navigator.vibrate([400,150,400,150,400])}catch(e){}
+  try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.3,.6].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.25,a.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+t+.25);o.start(a.currentTime+t);o.stop(a.currentTime+t+.26)})}catch(e){}
+}
+function bindTimer(box,secs){
+  const clock=box.querySelector('.clock'),btn=box.querySelector('button');
+  let left=secs,running=false;
+  btn.onclick=e=>{
+    e.stopPropagation();
+    if(left<=0){left=secs;box.classList.remove('done');clock.textContent=fmt(left)}
+    if(running){stopTimer();running=false;btn.textContent='▶ Seguir';return}
+    stopTimer();running=true;btn.textContent='⏸ Pausa';
+    T={i:setInterval(()=>{left--;clock.textContent=fmt(Math.max(left,0));if(left<=0){stopTimer();running=false;btn.textContent='↺ Otra vez';box.classList.add('done');beep()}},1000)};
+  };
+}
+
+/* ============ DADOS (botón libre) ============ */
+function rollDice(){
+  stopTimer();
+  const a=rand(DICE.action),z=rand(DICE.zone),t=rand(DICE.time);
+  $('#diceWho').innerHTML=`<b>${esc(S.names[S.actor])}</b> a <b>${esc(S.names[other(S.actor)])}</b>`;
+  $('#diceBox').innerHTML=[a,z,t+'s'].map(x=>`<div class="die roll">${x}</div>`).join('');
+  $('#diceTimer').innerHTML=`<div class="clock">${fmt(t)}</div><button>▶ Iniciar</button>`;
+  $('#diceTimer').className='timer';
+  bindTimer($('#diceTimer'),t);
+}
+$('#diceBtn').onclick=()=>{rollDice();$('#mDice').classList.add('on')};
+$('#diceRoll').onclick=rollDice;
+$('#diceClose').onclick=()=>{stopTimer();$('#mDice').classList.remove('on')};
+</script>
+</body>
+</html>
